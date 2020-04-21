@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:enabled="true"
+        android:id="@+id/navigation_home"
+        android:icon="@mipmap/home"
+        app:showAsAction="ifRoom"
+        android:title="首页"/>
+
+    <item
+        android:enabled="true"
+        android:id="@+id/navigation_launch"
+        android:icon="@mipmap/add"
+        app:showAsAction="ifRoom"
+        android:title="发布"/>
+
+    <item
+        android:enabled="true"
+        android:id="@+id/navigation_message"
+        android:icon="@mipmap/message"
+        app:showAsAction="ifRoom"
+        android:title="消息"/>
+
+    <item
+        android:enabled="true"
+        android:id="@+id/my"
+        android:icon="@mipmap/mine"
+        app:showAsAction="ifRoom"
+        android:title="我的"/>
+</menu>
