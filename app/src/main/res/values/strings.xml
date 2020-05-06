@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Favorites</string>
+    <string name="collection">我的收藏</string>
+    <string name="exam">考点收藏</string>
+    <string name="quesiton">问题收藏</string>
+    <string name="text">文档收藏</string>
+    <string name="els">其他</string>
+    <string name="demo">the content of the page you have collected</string>
+    <string name="demo_time">Time</string>
+</resources>
