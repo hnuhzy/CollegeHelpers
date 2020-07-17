@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00000000"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    >
+
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    android:paddingBottom="20dp"
+
+        >
+    <LinearLayout
+        android:id="@+id/rl_camera"
+        android:layout_width="fill_parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        >
+
+        <ImageView
+            android:id="@+id/camera"
+            android:layout_width="44dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_toLeftOf="@id/xiangji"
+            android:layout_weight="1"
+            android:src="@drawable/camera3" />
+        <Button
+            android:id="@+id/xiangji"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:text="相机"
+            android:textSize="30sp"
+            android:textColor="#ff000000"
+            android:gravity="center"
+            android:background="#ffffffff"
+            android:layout_marginLeft="0dp"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/rl_picture"
+        android:layout_width="fill_parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="#ffffff"
+        android:orientation="horizontal"
+        >
+
+        <ImageView
+            android:id="@+id/picture"
+            android:layout_width="44dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_toLeftOf="@id/xiangji"
+            android:layout_weight="1"
+            android:src="@drawable/tuku2" />
+        <Button
+            android:id="@+id/tuku"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:text="相册"
+            android:textSize="30sp"
+            android:textColor="#ff000000"
+            android:background="#ffffffff"
+            android:layout_centerInParent="true"
+            />
+
+    </LinearLayout>
+    </LinearLayout>
+
+
+
+</RelativeLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--API为21支持的style  -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <!--题目详情界面的style,标题栏为透明  -->
+    <style name="mytheme" parent="AppTheme">
+        <item name="android:statusBarColor">@android:color/transparent</item>
+</style>
+    <!--历史记录界面的style,标题栏为高亮,即字体为深色  -->
+    <style name="history" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:statusBarColor">@color/cardview_light_background</item>
+    </style>
+
+</resources>

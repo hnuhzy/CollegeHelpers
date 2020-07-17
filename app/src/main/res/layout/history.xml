@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.appbar.AppBarLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#ffffffff"
+    android:orientation="vertical"
+    style="@style/history"
+    >
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/history_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_collapseMode="pin"
+        app:title="搜题记录"
+        app:titleMarginStart="90dp"
+        app:navigationIcon="@drawable/backup1"
+        >
+    </androidx.appcompat.widget.Toolbar>
+
+    <RadioGroup
+        android:id="@+id/radiogroup_history"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <RadioButton
+            android:id="@+id/button1_history"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:text="全部"
+            android:textSize="15sp"
+            android:layout_margin="20dp"
+            />
+        <RadioButton
+            android:id="@+id/button2_history"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:text="语文"
+            android:textSize="15sp"
+            android:layout_margin="20dp"
+            />
+        <RadioButton
+            android:id="@+id/button3_history"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:text="数学"
+            android:textSize="15sp"
+            android:layout_margin="20dp"
+            />
+    </RadioGroup>
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/history_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </androidx.viewpager.widget.ViewPager>
+
+
+</com.google.android.material.appbar.AppBarLayout>

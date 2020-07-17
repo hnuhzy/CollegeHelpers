@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--历史记录界面的菜单栏  -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+<item
+    android:id="@+id/questionhistroy"
+    android:title="批量管理"
+    app:showAsAction="never"
+    >
+</item>
+</menu>

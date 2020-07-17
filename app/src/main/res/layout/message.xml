@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--fitsSystemWindows设置图片显示为沉浸模式  -->
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/kuang1"
+    android:fitsSystemWindows="true"
+    style="@style/mytheme"
+    >
+    <!--悬浮按钮  -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/totop"
+        android:layout_gravity="end|bottom"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="100dp"
+        app:backgroundTint="#a6dcef"
+        />
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:fitsSystemWindows="true"
+        >
+        <!--scrimAnimationDuration为切换效果的时间
+            statusBarScrim为完全折叠时状态栏的颜色
+        -->
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/collapsingToolbar"
+            android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar"
+            app:contentScrim="#a6dcef"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:scrimAnimationDuration="@android:integer/config_longAnimTime"
+            android:background="#ffffffff"
+            android:fitsSystemWindows="true"
+            app:statusBarScrim="@android:color/white"
+            >
+            <!--设置该图片为沉浸模式,弧形图片，具体见ArcImageview类  -->
+            <com.example.search.ArcImageview
+                android:id="@+id/arcview"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                app:arcHeight = "50dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/background"
+                tools:ignore="MissingConstraints"
+                android:fitsSystemWindows="true"
+                />
+            <!--layout_collapseMode="pin"表示标题栏固定  -->
+            <androidx.appcompat.widget.Toolbar
+                app:navigationIcon="@drawable/backup"
+                android:background="@android:color/transparent"
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?android:attr/actionBarSize"
+                app:layout_collapseMode="pin">
+
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+    <!--滚动页面嵌套再可刷新页面中  -->
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipefreshlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nestedscorllerview"
+            android:fillViewport="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:clipChildren="false"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/viewpager"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <RadioGroup
+                    android:id="@+id/radiogroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_alignTop="@+id/viewpager"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+
+                    >
+
+                    <RadioButton
+                        android:id="@+id/button1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/button1"
+                        android:layout_weight="1"
+                        android:checked="true"
+                        android:button="@null"
+                        android:scaleType="centerCrop"
+                        android:layout_margin="10dp"
+                        android:alpha="@android:integer/status_bar_notification_info_maxnum"
+                        />
+                    <RadioButton
+                        android:id="@+id/button2"
+                        android:layout_margin="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/button2"
+                        android:layout_weight="1"
+                        android:checked="true"
+                        android:button="@null"
+                        />
+                    <RadioButton
+                        android:id="@+id/button3"
+                        android:layout_margin="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/button3"
+                        android:layout_weight="1"
+                        android:checked="true"
+                        android:button="@null"
+                        />
+                </RadioGroup>
+            </FrameLayout>
+
+        </androidx.core.widget.NestedScrollView>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

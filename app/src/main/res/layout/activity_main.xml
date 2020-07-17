@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <!--fitsSystemWindows="true"为沉浸模式 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/background"
+    android:fitsSystemWindows="true"
+    android:id="@+id/relativelayout"
+    >
+    <!--返回键 -->
+    <ImageButton
+        android:id="@+id/left"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignLeft="@+id/kuang1"
+        android:layout_marginTop="20sp"
+        android:background="@drawable/left"
+        android:clickable="true"
+        android:fitsSystemWindows="true"
+        />
+
+    <!--历史记录 -->
+    <ImageButton
+        android:id="@+id/history"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignRight="@+id/kuang1"
+        android:layout_marginTop="20sp"
+        android:background="@drawable/history"
+        android:clickable="true"
+        android:fitsSystemWindows="true"
+        />
+
+    <LinearLayout
+        android:id="@+id/kuang1"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginLeft="20sp"
+        android:layout_marginTop="150dp"
+        android:layout_marginRight="20sp"
+        android:background="@drawable/toumingkuang"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:fitsSystemWindows="true"
+        >
+        <LinearLayout
+            android:id="@+id/take_picture"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="60dp"
+            >
+
+            <ImageView
+                android:id="@+id/picture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/camera"
+                />
+
+            <Button
+                android:id="@+id/takepicture"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/picture"
+                android:layout_weight="4"
+                android:background="@android:color/transparent"
+                android:gravity="center_horizontal|center_vertical"
+                android:hint="拍照搜题"
+                android:textSize="35sp"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/take_picture"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="40dp"
+            >
+
+            <ImageView
+                android:id="@+id/text_picture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/text2"
+                />
+
+            <EditText
+                android:id="@+id/Input"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/picture"
+                android:layout_weight="4"
+                android:gravity="center_vertical|center_horizontal"
+                android:hint="文本信息"
+                android:inputType="text"
+                android:textSize="35sp"
+                android:background="@null"
+                />
+        </LinearLayout>
+
+
+    </LinearLayout>
+        <Button
+            android:id="@+id/search_button"
+            android:layout_width="272dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/kuang1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/search_button"
+            android:text="搜  索"
+            android:textSize="30sp"
+            android:textColor="#ffffffff"
+            />
+
+
+
+
+</RelativeLayout>
